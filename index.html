@@ -7,36 +7,34 @@
   <meta name="description" content="Joseph Mwangi Maina, data scientist specialising in machine learning, generative AI and uncertainty-aware modelling.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
 /* =========================================================
    COLOURS — dark by default (the look of most top ML/dev
    portfolios), with a light version for light-mode devices
    ========================================================= */
 :root {
-  /* THEME D: "Terracotta & Ink" - warm paper, ink-navy text,
-     one signature accent inspired by East African red earth */
-  --bg: #f6f1e9;          /* warm paper */
-  --card: #fffdf9;        /* cards on hover */
-  --text: #3a3f4b;        /* body text */
-  --heading: #141b2d;     /* ink navy for name and headings */
-  --muted: #7a7468;       /* dates, small text */
-  --line: #e4dccf;        /* hairlines */
-  --accent: #b4532a;      /* terracotta: the one signature colour */
-  --accent-soft: rgba(180, 83, 42, 0.09);
-  --glow: rgba(180, 83, 42, 0.06);
+  --bg: #0b1418;          /* deep slate-teal background */
+  --card: #12222a;        /* hover background for items */
+  --text: #c9d6dc;        /* body text */
+  --heading: #eef4f6;     /* headings, name */
+  --muted: #7f949c;       /* dates, small text */
+  --line: #1f3540;        /* borders */
+  --accent: #4fd1b5;      /* teal accent */
+  --accent-soft: rgba(79, 209, 181, 0.12);
+  --glow: rgba(29, 120, 116, 0.15);
 }
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --bg: #11151f;        /* deep ink */
-    --card: #181d29;
-    --text: #d9d3c7;
-    --heading: #f4efe6;
-    --muted: #958e82;
-    --line: #262c3a;
-    --accent: #e0794b;    /* lighter terracotta for dark backgrounds */
-    --accent-soft: rgba(224, 121, 75, 0.12);
-    --glow: rgba(224, 121, 75, 0.08);
+    --bg: #f7f8f6;
+    --card: #ffffff;
+    --text: #3b4a4f;
+    --heading: #10201f;
+    --muted: #6b7b80;
+    --line: #dde3e1;
+    --accent: #0f7a66;
+    --accent-soft: rgba(15, 122, 102, 0.1);
+    --glow: rgba(15, 122, 102, 0.06);
   }
 }
 
@@ -208,7 +206,7 @@ footer { color: var(--muted); font-size: 0.82rem; padding-bottom: 24px; }
 #rotate {
   color: var(--accent); display: inline-block;
   transition: opacity 0.3s, transform 0.3s;
-  background: linear-gradient(90deg, var(--accent), #d98f2b);
+  background: linear-gradient(90deg, var(--accent), #7ee0f0);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 #rotate.out { opacity: 0; transform: translateY(6px); }
@@ -231,13 +229,6 @@ footer { color: var(--muted); font-size: 0.82rem; padding-bottom: 24px; }
 .rq-title { color: var(--heading); font-weight: 600; font-size: 0.9rem; margin: 14px 0 6px; }
 .body > p + p { margin-top: 10px; }
 .points a { color: var(--accent); }
-
-/* THEME D typography: serif display face gives the site its own voice */
-.side h1, .rotator, .lead { font-family: "Newsreader", Georgia, "Times New Roman", serif; letter-spacing: -0.01em; }
-.side h1 { font-weight: 600; }
-.lead { font-weight: 500; font-size: 1.5rem; }
-.label { color: var(--accent); }
-.label::after { content: ""; display: inline-block; width: 40px; height: 1px; background: var(--accent); vertical-align: middle; margin-left: 12px; opacity: .6; }
 </style>
 </head>
 <body>
