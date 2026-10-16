@@ -7,34 +7,36 @@
   <meta name="description" content="Joseph Mwangi Maina, data scientist specialising in machine learning, generative AI and uncertainty-aware modelling.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
   <style>
 /* =========================================================
    COLOURS — dark by default (the look of most top ML/dev
    portfolios), with a light version for light-mode devices
    ========================================================= */
 :root {
-  --bg: #0b1418;          /* deep slate-teal background */
-  --card: #12222a;        /* hover background for items */
-  --text: #c9d6dc;        /* body text */
-  --heading: #eef4f6;     /* headings, name */
-  --muted: #7f949c;       /* dates, small text */
-  --line: #1f3540;        /* borders */
-  --accent: #4fd1b5;      /* teal accent */
-  --accent-soft: rgba(79, 209, 181, 0.12);
-  --glow: rgba(29, 120, 116, 0.15);
+  /* THEME D: "Terracotta & Ink" - warm paper, ink-navy text,
+     one signature accent inspired by East African red earth */
+  --bg: #f6f1e9;          /* warm paper */
+  --card: #fffdf9;        /* cards on hover */
+  --text: #3a3f4b;        /* body text */
+  --heading: #141b2d;     /* ink navy for name and headings */
+  --muted: #7a7468;       /* dates, small text */
+  --line: #e4dccf;        /* hairlines */
+  --accent: #b4532a;      /* terracotta: the one signature colour */
+  --accent-soft: rgba(180, 83, 42, 0.09);
+  --glow: rgba(180, 83, 42, 0.06);
 }
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --bg: #f7f8f6;
-    --card: #ffffff;
-    --text: #3b4a4f;
-    --heading: #10201f;
-    --muted: #6b7b80;
-    --line: #dde3e1;
-    --accent: #0f7a66;
-    --accent-soft: rgba(15, 122, 102, 0.1);
-    --glow: rgba(15, 122, 102, 0.06);
+    --bg: #11151f;        /* deep ink */
+    --card: #181d29;
+    --text: #d9d3c7;
+    --heading: #f4efe6;
+    --muted: #958e82;
+    --line: #262c3a;
+    --accent: #e0794b;    /* lighter terracotta for dark backgrounds */
+    --accent-soft: rgba(224, 121, 75, 0.12);
+    --glow: rgba(224, 121, 75, 0.08);
   }
 }
 
@@ -206,7 +208,7 @@ footer { color: var(--muted); font-size: 0.82rem; padding-bottom: 24px; }
 #rotate {
   color: var(--accent); display: inline-block;
   transition: opacity 0.3s, transform 0.3s;
-  background: linear-gradient(90deg, var(--accent), #7ee0f0);
+  background: linear-gradient(90deg, var(--accent), #d98f2b);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 #rotate.out { opacity: 0; transform: translateY(6px); }
@@ -229,6 +231,13 @@ footer { color: var(--muted); font-size: 0.82rem; padding-bottom: 24px; }
 .rq-title { color: var(--heading); font-weight: 600; font-size: 0.9rem; margin: 14px 0 6px; }
 .body > p + p { margin-top: 10px; }
 .points a { color: var(--accent); }
+
+/* THEME D typography: serif display face gives the site its own voice */
+.side h1, .rotator, .lead { font-family: "Newsreader", Georgia, "Times New Roman", serif; letter-spacing: -0.01em; }
+.side h1 { font-weight: 600; }
+.lead { font-weight: 500; font-size: 1.5rem; }
+.label { color: var(--accent); }
+.label::after { content: ""; display: inline-block; width: 40px; height: 1px; background: var(--accent); vertical-align: middle; margin-left: 12px; opacity: .6; }
 </style>
 </head>
 <body>
@@ -290,7 +299,6 @@ footer { color: var(--muted); font-size: 0.82rem; padding-bottom: 24px; }
         <div class="news">
           <h4>News</h4>
           <ul>
-            <li><time>Oct 2026</time><span>Launched this website.</span></li>
             <li><time>Aug 2026</time><span>Joined Grow Kinesis as an AIMS-H2i Data Science &amp; AI Fellow.</span></li>
             <li><time>Jan 2026</time><span>Started at Equity Bank Rwanda, working on multilingual NLP and forecasting.</span></li>
             <li><time>Jun 2025</time><span>Completed my MSc at AIMS Rwanda; thesis awarded Distinction.</span></li>
@@ -345,17 +353,16 @@ footer { color: var(--muted); font-size: 0.82rem; padding-bottom: 24px; }
       <!-- ===== TALKS ===== -->
       <section id="talks">
         <h3 class="label">Talks</h3>
-        <!-- 👇 When you have the slides PDF: name it deepseek-r1-slides.pdf, put it next to index.html,
-             and change <div class="item"> below to <a class="item" href="deepseek-r1-slides.pdf" target="_blank"> (and </div> at the end to </a>) -->
-        <div class="item">
+        <!-- Slides: deepseek-grpo-slides.pdf sits next to index.html -->
+        <a class="item" href="deepseek-grpo-slides.pdf" target="_blank">
           <div class="when">AIMS Rwanda<br>2025</div>
           <div class="body">
-            <h4>Mathematical Foundations of DeepSeek-R1</h4>
+            <h4>Mathematical Foundations of DeepSeek-R1 <span class="arrow">↗</span></h4>
             <p class="sub">MSc presentation · AIMS Rwanda</p>
-            <p>A walk-through of the mathematics behind DeepSeek-R1's reasoning abilities, centred on Group Relative Policy Optimization (GRPO): how reinforcement learning, rather than large amounts of supervised data, can teach a language model to reason step by step.</p>
-            <ul class="tags"><li>LLMs</li><li>Reinforcement learning</li><li>GRPO</li><li>Beamer</li></ul>
+            <p>How DeepSeek reaches strong reasoning at low cost. The core is Group Relative Policy Optimization (GRPO): it builds on PPO's clipped objective but normalises each sampled answer's reward against its group, removing the critic network and reducing gradient variance. Also covers Mixture-of-Experts layers, multi-token prediction and speculative decoding.</p>
+            <ul class="tags"><li>GRPO</li><li>PPO</li><li>Mixture-of-Experts</li><li>LLM reasoning</li></ul>
           </div>
-        </div>
+        </a>
       </section>
 
       <!-- ===== EXPERIENCE (timeline) ===== -->
