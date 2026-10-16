@@ -1,0 +1,128 @@
+% =============================================================
+% CV - Joseph Mwangi Maina (v2, general version)
+% Compile with pdflatex (Overleaf works too).
+% To make the WEBSITE version (no phone number), change
+% \webversionfalse to \webversiontrue below.
+% =============================================================
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=1.7cm,top=1.4cm,bottom=1.5cm]{geometry}
+\usepackage{mathptmx}           % Times-style text, like the original CV
+\usepackage[T1]{fontenc}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\newif\ifwebversion
+\webversionfalse   % <- set to \webversiontrue for the website copy
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section style: bold caps with a rule underneath
+\titleformat{\section}{\large\bfseries\scshape}{}{0pt}{}[\vspace{-0.6ex}\rule{\textwidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{1.1ex}{0.8ex}
+
+\setlist[itemize]{leftmargin=1.4em, itemsep=0.15ex, topsep=0.3ex, label=\textbullet}
+
+% \entry{Title}{Dates}{Organisation line}
+\newcommand{\entry}[3]{%
+  \textbf{#1}\hfill\textit{#2}\\
+  \textit{#3}\par\vspace{0.2ex}}
+
+\begin{document}
+
+% ---------------- Header ----------------
+\begin{center}
+  {\LARGE\bfseries JOSEPH MWANGI MAINA}\\[0.6ex]
+  Kigali, Rwanda \;|\; \href{mailto:joseph.maina@aims.ac.rw}{joseph.maina@aims.ac.rw}%
+  \ifwebversion\else\;|\; +250 795 288 998\fi\\[0.2ex]
+  \href{https://jowie1111.github.io}{jowie1111.github.io} \;|\;
+  \href{https://www.linkedin.com/in/joseph-maina-008abb195}{linkedin.com/in/joseph-maina-008abb195} \;|\;
+  \href{https://github.com/jowie1111}{github.com/jowie1111}
+\end{center}
+\vspace{-1ex}
+
+% ---------------- Research interests ----------------
+\section{Research Interests}
+\begin{itemize}
+  \item Trustworthy AI for health: uncertainty quantification and calibration for clinical machine learning and large language models.
+  \item Generative models (GANs, diffusion models) for probabilistic forecasting and health data.
+  \item Language technology for African settings, including low-resource and code-switched text.
+\end{itemize}
+
+% ---------------- Education ----------------
+\section{Education}
+\entry{MSc, Mathematical Sciences (Data Science)}{Jul 2024 -- Jun 2025}
+{African Institute for Mathematical Sciences (AIMS) Rwanda, Kigali. Overall grade: Good Pass. Thesis: Distinction.}
+Thesis: comparison of conditional Wasserstein GANs with quantile regression, expectile regression and mixture density networks for probabilistic regression, scored on pinball loss, calibration and interval coverage. Data: weather and renewable energy. Supervisor: Prof.\ Michael Melgaard, University of Sussex.
+Code: \href{https://github.com/jowie1111/Conditional-WGAN-CWGAN-For-Probabilistic-Regression-in-Energy-Consumption-Forecasting}{github.com/jowie1111 (thesis repository)}.\\
+Relevant courses: Statistical Regression, Statistical Machine Learning, Actuarial Mathematics, Numerical Analysis, Data-Driven Optimization, Introduction to Neural Networks.
+
+\vspace{0.8ex}
+\entry{BSc, Applied Statistics and Computing}{Jul 2017 -- Dec 2021}
+{Karatina University, Kenya. Second Class Honours, Upper Division.}
+Final-year project: factors affecting banana farming in Taveta, Kenya, using logistic regression, with flood exposure as a climatic factor.\\
+Relevant courses: Mathematical Statistics I to III, Theory of Estimation, Introduction to Measure and Probability, Stochastic Processes, Survival Models and Analysis, Bayesian Inference and Data Analysis, Non-Parametric and Robust Methods, Statistical Computing.
+
+% ---------------- Experience ----------------
+\section{Professional and Research Experience}
+\entry{AIMS-H2i Data Science and AI Fellow}{Aug 2026 -- Present}
+{Grow Kinesis, Lagos, Nigeria (AIMS-H2i Health Startup Fellowship). First AI/ML hire.}
+\begin{itemize}
+  \item Building a retrieval-augmented nutrition assistant for nutritionists, who review every suggestion before it is saved.
+  \item Audited the production database and design files and identified data-model gaps that affect nutrition safety features.
+  \item Built a reference food dataset from Nigerian and West African food composition tables and documented its nutrient coverage gaps.
+  \item Wrote the \texttt{growkinesis} Python package (9 modules) for data processing.
+\end{itemize}
+
+\entry{Data Scientist Apprentice}{Jan 2026 -- Jul 2026}{Equity Bank Rwanda, Kigali, Rwanda}
+\begin{itemize}
+  \item Fine-tuned AfroXLM-R with two added classification heads to predict sentiment, aspect and intent together on Kinyarwanda, French and English customer feedback (mean F1 of 0.83), with a translation step into English so predictions could be validated.
+  \item Forecast server demand with Random Forest and XGBoost regressors, and computed compound annual growth rates to guide procurement planning.
+  \item Built dashboards in Power BI and Python to track issue volume, ageing and resolution.
+\end{itemize}
+
+\entry{Data Science Fellow, Transforming Healthcare Using AI}{Jul 2025 -- Oct 2025}{eFiche Company, Kigali, Rwanda}
+\begin{itemize}
+  \item Built statistical models for patient risk stratification, including Bayesian risk assessment and Cox proportional hazards models.
+  \item Built a clinical decision-support system based on WHO IMCI guidelines for childhood illness. Led the move from a static design to a retrieval-augmented one and compared the two.
+\end{itemize}
+
+\entry{Junior Data Analyst}{Dec 2023 -- Dec 2024}{ICT Authority, Nairobi, Kenya}
+\begin{itemize}
+  \item Analysed national e-waste data to inform collection and recycling strategy, and produced reports and visuals from it.
+\end{itemize}
+
+\entry{Volunteer Data Analyst}{Jun 2022 -- Jan 2024}{Kenya Red Cross, Taveta, Kenya}
+\begin{itemize}
+  \item Wrote data-cleaning scripts for humanitarian project data and advised field teams on data collection.
+\end{itemize}
+
+% ---------------- Presentations ----------------
+\section{Presentations}
+\begin{itemize}
+  \item \textit{Mathematical Foundations of DeepSeek-R1: Group Relative Policy Optimization (GRPO)}, MSc presentation, AIMS Rwanda, 2025.
+        \href{https://jowie1111.github.io/deepseek-grpo-slides.pdf}{[slides]}
+\end{itemize}
+
+% ---------------- Skills ----------------
+\section{Technical Skills}
+\textbf{Programming:} Python (NumPy, pandas, scikit-learn, PyTorch, TensorFlow), R (tidyverse, ggplot2, caret), SQL, Julia, \LaTeX\\
+\textbf{Statistics:} Regression and GLMs, quantile and expectile regression, Bayesian inference, Cox proportional hazards models, time series\\
+\textbf{Machine learning:} GANs, mixture density networks, gradient boosting, random forests, neural networks, transformers, retrieval-augmented generation\\
+\textbf{Tools:} Git and GitHub, Jupyter, Power BI, MongoDB
+
+% ---------------- Certifications ----------------
+\section{Certifications and Languages}
+\begin{itemize}
+  \item Data Scientist Associate, DataCamp (2025). Google Data Analytics Professional Certificate, Coursera (2024).
+  \item English (professional). Swahili (native).
+\end{itemize}
+
+% ---------------- References ----------------
+\section{References}
+Available on request.
+
+\end{document}
